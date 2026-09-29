@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+
+  "name": "amir",
+  "main": "worker.js",
+
+  "compatibility_date": "2026-07-30",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "web-app",
+      "database_id": "edbb4f28-f1e7-4988-8bf5-1fc912967922"
+    }
+  ],
+
+  "kv_namespaces": [
+    {
+      "binding": "web-app",
+      "id": "0d9e92fe2af94474b34a757972c35282"
+    }
+  ],
+
+  "workers_dev": true,
+  "preview_urls": true,
+
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.01
+    }
+  }
+}

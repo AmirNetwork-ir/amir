@@ -1,0 +1,16 @@
+{
+  "name": "amir",
+  "version": "4.9.3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/verify-release.mjs && node --check worker.js",
+    "deploy": "wrangler deploy"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "wrangler": "4.116.0"
+  }
+}
